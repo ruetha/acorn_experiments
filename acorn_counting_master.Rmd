@@ -1,2 +1,21 @@
 
+# Acorn counting experiment
+
+This notebook contains the preliminary analysis of my acorn count observational experiment, carried out on Noth-West Poland.
+Acorn collected during autumn 2021 (extremely low crop)
+
+Species analysed: 
+- Common European Pedunculate Oak (_Quercus petraea_)
+- Alien invasive Red Oak (_Quercus rubra_)
+
+The used programming language is R
+
+getwd()
+
+# Importing standard packages
+library(dplyr)
+library(ggplot2)
+library(plotly)
+
+
 
