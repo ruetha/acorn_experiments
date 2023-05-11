@@ -1,21 +1,9 @@
 getwd()
 
-library(stringi)
-library(reshape2)
+# Importing standard packages
+library(dplyr)
 library(ggplot2)
 library(plotly)
-library(dplyr) #to create data subsets
-library(glmmTMB)
-library(effects)
-library(ggpubr)
-library(lsmeans)
-library(emmeans)
-library(sjPlot)
-library(sjmisc)
-library(stargazer)
-library(confidence)
-library(ggeffects)
-library(finalfit)
 
 seedrain_dataset<-read.csv("Acorn counting_master_new.csv", header = T, sep=";", dec=".")
 seedrain_dataset$year=as.factor(seedrain_dataset$year)
@@ -59,6 +47,9 @@ hist(seedrain_dataset$acorns,
      main="Ticks distribution",
      col="grey",
      breaks=50)
+
+# Setting resolution options
+options(repr.plot.width = 10, repr.plot.height = 4, repr.plot.res = 300)
 
 # density chart acorn distribution among species
 acornDC <- ggplot (subset(seedrain_dataset, !is.na(acorns), !is.na(species)), 
